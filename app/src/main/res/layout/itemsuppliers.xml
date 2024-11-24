@@ -1,0 +1,82 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="15dp"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="5dp">
+
+<LinearLayout
+    android:id="@+id/itemDelete"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:orientation="horizontal"
+android:background="#F5F5F5"
+android:padding="8dp"
+android:gravity="center_vertical">
+
+<LinearLayout
+    android:layout_width="0dp"
+    android:layout_height="130dp"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:paddingEnd="8dp">
+
+    <TextView
+        android:id="@+id/textSupplierName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="10dp"
+        android:text="Name Supplier"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+    <TextView
+        android:id="@+id/textSupplierContact"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:text="phone"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textSupplierEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:text="email"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/textSupplierDescreption"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginStart="10dp"
+        android:text="description"
+        android:textSize="14sp" />
+</LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content" />
+<ImageView
+    android:id="@+id/imageSupplier"
+    android:layout_width="100dp"
+    android:layout_height="96dp"
+    android:layout_marginStart="8dp"
+    android:src="@drawable/shark"
+    android:scaleType="centerCrop"/>
+    <ImageButton
+        android:id="@+id/btnEditS"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/edit"
+        android:contentDescription="Increase"
+        android:background="?attr/selectableItemBackground"
+        android:layout_marginBottom="8dp" />
+
+</LinearLayout>
+
+    </androidx.cardview.widget.CardView>

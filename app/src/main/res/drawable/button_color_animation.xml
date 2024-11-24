@@ -1,0 +1,10 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android" android:oneshot="false">
+    <!-- Màu đầu tiên -->
+    <item android:drawable="@color/borderColor" android:duration="200" />
+    <!-- Màu thứ hai -->
+    <item android:drawable="@color/button_cart" android:duration="200" />
+    <!-- Màu thứ ba -->
+    <item android:drawable="@color/blue" android:duration="200" />
+    <!-- Màu thứ tư -->
+    <item android:drawable="@color/background_color" android:duration="200" />
+</animation-list>

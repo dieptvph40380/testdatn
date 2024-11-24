@@ -1,0 +1,13 @@
+<!-- res/drawable/bg_dialog.xml -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Màu nền -->
+    <solid android:color="@color/white" />
+
+    <!-- Góc bo tròn -->
+    <corners android:radius="16dp" />
+
+    <!-- Đường viền -->
+    <stroke
+        android:width="1dp"
+        android:color="@color/light_gray" />
+</shape>

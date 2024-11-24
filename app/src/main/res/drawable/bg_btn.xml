@@ -1,0 +1,39 @@
+   <ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="#64FFDA"> <!-- Màu hiệu ứng ripple -->
+
+    <item>
+        <shape>
+            <solid android:color="@color/button_cart" /> <!-- Màu tím nền -->
+            <corners android:radius="16dp" />
+        </shape>
+    </item>
+</ripple>
+
+
+
+<!--<selector xmlns:android="http://schemas.android.com/apk/res/android">-->
+
+<!--&lt;!&ndash; Trạng thái nhấn &ndash;&gt;-->
+<!--<item android:state_pressed="true">-->
+<!--    <shape>-->
+<!--        <gradient-->
+<!--            android:startColor="#FFC107" &lt;!&ndash; Vàng &ndash;&gt;-->
+<!--        android:centerColor="#FF5722" &lt;!&ndash; Cam &ndash;&gt;-->
+<!--        android:endColor="#FF9800"   &lt;!&ndash; Cam đậm &ndash;&gt;-->
+<!--        android:angle="90" /> &lt;!&ndash; Góc chuyển màu &ndash;&gt;-->
+<!--        <corners android:radius="16dp" />-->
+<!--    </shape>-->
+<!--</item>-->
+
+<!--&lt;!&ndash; Trạng thái mặc định &ndash;&gt;-->
+<!--<item>-->
+<!--    <shape>-->
+<!--        <gradient-->
+<!--            android:startColor="#03A9F4" &lt;!&ndash; Xanh lam &ndash;&gt;-->
+<!--        android:centerColor="#4CAF50" &lt;!&ndash; Xanh lục &ndash;&gt;-->
+<!--        android:endColor="#0288D1"   &lt;!&ndash; Xanh đậm &ndash;&gt;-->
+<!--        android:angle="45" /> &lt;!&ndash; Góc chuyển màu &ndash;&gt;-->
+<!--        <corners android:radius="16dp" />-->
+<!--    </shape>-->
+<!--</item>-->
+<!--</selector>-->

@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "118664227099",
+    "project_id": "genz-fashion-9254f",
+    "storage_bucket": "genz-fashion-9254f.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:118664227099:android:dfc73e4dc5bf0970c30bbe",
+        "android_client_info": {
+          "package_name": "com.example.genz_fashion"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD13H9TwbnaX3Lc6tgK2M3gKojHFC1jyFM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

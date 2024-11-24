@@ -1,0 +1,27 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Khi được chọn (hiển thị chấm tròn trắng) -->
+    <item android:state_checked="true">
+        <layer-list>
+            <!-- Nền màu -->
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="@android:color/transparent" />
+                </shape>
+            </item>
+            <!-- Chấm tròn trắng ở giữa -->
+            <item>
+                <shape android:shape="oval">
+                    <solid android:color="#FFFFFF" />
+                    <size android:width="16dp" android:height="16dp" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+    <!-- Khi không được chọn -->
+    <item android:state_checked="false">
+        <shape android:shape="oval">
+            <solid android:color="@android:color/transparent" />
+        </shape>
+    </item>
+</selector>

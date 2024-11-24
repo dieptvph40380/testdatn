@@ -1,0 +1,6 @@
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Selected state -->
+    <item android:state_checked="true" android:color="@color/icon_selected_color" />
+    <!-- Unselected state -->
+    <item android:state_checked="false" android:color="@color/icon_unselected_color" />
+</selector>

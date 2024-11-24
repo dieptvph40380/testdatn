@@ -1,0 +1,7 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Màu nền khi checkbox không được chọn -->
+    <solid android:color="#000000"/>  <!-- Màu nền trắng -->
+    <size android:width="24dp" android:height="24dp"/> <!-- Kích thước checkbox -->
+    <stroke android:color="#FFFFFF" android:width="2dp"/> <!-- Màu viền đen -->
+    <corners android:radius="4dp"/> <!-- Bo góc -->
+</shape>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="10dp"
+    app:cardCornerRadius="10dp"
+    android:layout_height="230dp">
+
+    <LinearLayout
+        android:id="@+id/show_product"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- FrameLayout để chồng ảnh và icon -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp">
+
+            <!-- Ảnh sản phẩm -->
+            <ImageView
+                android:id="@+id/img_product"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/ic_launcher_background" />
+
+            <!-- Wishlist Icon -->
+            <ImageView
+                android:id="@+id/wishlist_icon"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/heart1"
+                android:layout_margin="8dp"
+                android:layout_gravity="end|top" />
+        </FrameLayout>
+
+        <!-- Tên sản phẩm -->
+        <TextView
+            android:id="@+id/tvProduct_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Product Name"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:textColor="@android:color/black"
+            android:layout_marginTop="4dp" />
+
+        <!-- Giá sản phẩm -->
+        <TextView
+            android:id="@+id/tvProduct_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Price: 9032"
+            android:textSize="14sp"
+            android:textColor="@color/red"
+            android:layout_marginLeft="10dp" />
+
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

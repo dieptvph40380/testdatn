@@ -1,0 +1,19 @@
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:oneshot="false">
+
+    <!-- Gradient 1 -->
+    <item
+        android:drawable="@drawable/color1_view_2"
+        android:duration="500" />
+
+    <!-- Gradient 2 -->
+    <item
+        android:drawable="@drawable/color2_view_2"
+        android:duration="500" />
+
+
+    <!-- Gradient 3 -->
+    <item
+        android:drawable="@drawable/color3_view_2"
+        android:duration="500" />
+</animation-list>

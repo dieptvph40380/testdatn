@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Nền trong suốt -->
+    <solid android:color="@android:color/transparent" />
+
+    <!-- Viền với độ dày 1dp và màu đen -->
+    <stroke
+        android:width="1dp"
+        android:color="#000000" />
+
+
+
+    <!-- Khoảng cách giữa nội dung và viền -->
+
+</shape>

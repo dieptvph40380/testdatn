@@ -1,0 +1,185 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="#F5F5F5">
+
+    <!-- CardView for Entire Layout -->
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:padding="16dp"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="6dp"
+        android:background="@android:color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <!-- Header Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Update Product"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <ImageButton
+                    android:id="@+id/img_cancel2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="220dp"
+                    android:src="@drawable/ic_clear_black_24dp"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:contentDescription="Close" />
+            </LinearLayout>
+
+            <!-- Form Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="10dp"
+                >
+
+                <!-- Image View -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/product_image_ud"
+                        android:layout_width="150dp"
+                        android:layout_height="260dp"
+                        android:background="#D6E4FF"
+                        android:scaleType="centerInside"
+                        android:contentDescription="Product Image" />
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/updateproductupload_ud"
+                        android:layout_gravity="center"
+                        android:layout_width="120dp"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="5dp"
+                        android:backgroundTint="#6B98D1"
+                        android:text="Upload"
+                        app:cornerRadius="12dp" />
+
+                </LinearLayout>
+                <!-- Input Fields -->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginStart="16dp">
+
+                    <!-- Name Product -->
+                    <EditText
+                        android:id="@+id/product_name_ud"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Name Product"
+                        android:background="@drawable/custom_edittext"
+                        android:padding="8dp"
+                        android:textSize="14sp" />
+
+                    <!-- Price -->
+                    <EditText
+                        android:id="@+id/product_price_ud"
+                        android:layout_width="200dp"
+                        android:layout_height="wrap_content"
+                        android:hint="Price ..."
+                        android:background="@drawable/custom_edittext"
+                        android:padding="8dp"
+                        android:textSize="14sp"
+                        android:inputType="numberDecimal"
+                        android:layout_marginTop="8dp" />
+
+                    <!-- Supplier -->
+                    <Spinner
+                        android:id="@+id/products_supplier_ud"
+                        android:layout_width="200dp"
+                        android:textSize="14sp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/custom_edittext"
+                        android:layout_height="wrap_content"/>
+
+                    <!-- Type Product -->
+                    <Spinner
+                        android:id="@+id/products_type_ud"
+                        android:layout_width="200dp"
+                        android:textSize="14sp"
+                        android:layout_marginTop="8dp"
+                        android:background="@drawable/custom_edittext"
+                        android:layout_height="wrap_content"/>
+                    <LinearLayout
+                        android:layout_width="220dp"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <!-- ChipGroup để hiển thị các size có sẵn -->
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chipGroupSizes_ud"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:singleLine="false"
+                            app:chipSpacingHorizontal="8dp"
+                            app:chipSpacingVertical="8dp" />
+
+                        <!-- LinearLayout để hiển thị danh sách EditText nhập số lượng -->
+                        <LinearLayout
+                            android:id="@+id/quantityLayout_ud"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="16dp">
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/product_description_ud"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:hint="Description"
+                    android:background="@drawable/custom_edittext"
+                    android:textSize="14sp"
+                    android:padding="10dp"
+                    android:layout_margin="10dp"
+                    android:maxLines="3" />
+            </LinearLayout>
+
+
+
+
+
+            <!-- Add Button -->
+            <Button
+                android:id="@+id/update_button_prd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Update"
+                android:textColor="@android:color/white"
+                android:backgroundTint="#6B98D1"
+                android:layout_gravity="center_horizontal"
+                android:padding="12dp"
+                android:textSize="16sp"
+                android:layout_margin="32dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

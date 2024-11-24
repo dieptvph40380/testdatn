@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.GenZ_Fashion"
+        android:usesCleartextTraffic="true"
+        tools:targetApi="31">
+        <activity
+            android:name="fpl.md37.genz_fashion.UserScreen.PaymentNotication"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.UserScreen.PaymentNotification"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.UserScreen.CheckOutActivity"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.UserScreen.PayMothodsFragment"
+            android:exported="true"
+            android:label="Merchant Demo"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="app"
+                    android:scheme="demozpdk" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="fpl.md37.genz_fashion.UserScreen.SearchUserActivity"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.UserScreen.RePassActivity"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.UserScreen.ForgotPassEmailActivity"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.UserScreen.ForgotRole"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.ManagerScreen.VoucherDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.QaA.Question1"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.QaA.Question2"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.QaA.Question3"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.QaA.Question4"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.UserScreen.DetailUser"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.UserScreen.OTPVerificationActivity"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.UserScreen.SendOtpActivity"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.ManagerScreen.ProductDetailActivity"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.ManagerScreen.ProfileCustomerFragment"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.ManagerScreen.SignUpActivity"
+            android:exported="false"
+            android:theme="@style/Theme.GenZ_Fashion" />
+        <activity
+            android:name="fpl.md37.genz_fashion.UserScreen.OTPForgotPassActivity"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.UserScreen.ChatActivity"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.UserScreen.ForgotPassActivity"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.ManagerScreen.MainActivityManager"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.UserScreen.MainActivity"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.UserScreen.WelcomeActivity"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.UserScreen.MyOrderActivity"
+            android:exported="false" />
+        <activity
+            android:name="fpl.md37.genz_fashion.ManagerScreen.SignInActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

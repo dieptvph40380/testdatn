@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#FFFFFF"
+    android:fitsSystemWindows="true"
+    >
+
+    <!-- Back Arrow -->
+    <ImageView
+        android:id="@+id/backArrow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/iconout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="76dp"
+        android:text="Chính sách đổi trả"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/backArrow"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Step 1 -->
+    <TextView
+        android:id="@+id/step1Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="1. Điều kiện đổi trả :"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <TextView
+        android:id="@+id/step1Description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="- Sản phẩm phải còn nguyên vẹn, chưa qua sử dụng và còn đầy đủ nhãn mác.\n - Đổi trả trong vòng 7-14 ngày kể từ ngày nhận hàng (tùy thuộc vào chính sách cụ thể của cửa hàng).\n - Sản phẩm bị lỗi sản xuất hoặc không đúng với mô tả trên ứng dụng sẽ được hỗ trợ đổi trả miễn phí."
+
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/step1Title" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#BDBDBD"
+        android:alpha="0.5"
+        app:layout_constraintTop_toBottomOf="@+id/step1Description" />
+
+    <!-- Step 2 -->
+    <TextView
+        android:id="@+id/step2Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="2. Cách thức đổi trả:"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/step1Description" />
+
+    <TextView
+        android:id="@+id/step2Description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Cung cấp lý do đổi trả và chọn phương thức hoàn tiền hoặc đổi sản phẩm tương đương."
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/step2Title" />
+
+    <!-- Divider -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="16dp"
+        android:background="#BDBDBD"
+        android:alpha="0.5"
+        app:layout_constraintTop_toBottomOf="@+id/step2Description" />
+
+    <!-- Step 3 -->
+    <TextView
+        android:id="@+id/step3Title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="3. Hoàn tiền"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/step2Description" />
+
+    <TextView
+        android:id="@+id/step3Description"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Nếu bạn chọn hoàn tiền, tiền sẽ được hoàn vào phương thức thanh toán ban đầu hoặc ví điện tử trong ứng dụng sau khi sản phẩm được kiểm tra. Thời gian hoàn tiền thường là 5-10 ngày làm việc."
+        android:textSize="16sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/step3Title" />
+
+    <!-- Thêm các bước tiếp theo tương tự ở đây -->
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

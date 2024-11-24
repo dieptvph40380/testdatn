@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:background="@drawable/bg_item_active">
+
+    <!-- Order Details (Thông tin đơn hàng) -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- List of Products -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvProductList_order"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                />
+        </LinearLayout>
+
+        <!-- Order Actions -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="end|center_vertical">
+
+            <!-- Order Time -->
+            <TextView
+                android:id="@+id/timeorder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Order placed: Today"
+                android:textSize="13dp"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Track Order Button -->
+            <Button
+                android:id="@+id/btnTrackOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Track Order"
+                android:backgroundTint="@color/blue"
+                android:textColor="@android:color/white"
+                android:textSize="12sp"
+                android:padding="4dp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

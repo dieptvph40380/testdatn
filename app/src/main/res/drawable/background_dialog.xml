@@ -1,0 +1,14 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Background color for the dialog -->
+    <solid android:color="@android:color/white" />
+
+    <!-- Rounded corners for the dialog -->
+    <corners android:radius="16dp" />
+
+    <!-- Optional: shadow or elevation (can be added programmatically or in styles) -->
+    <padding
+        android:left="16dp"
+        android:top="16dp"
+        android:right="16dp"
+        android:bottom="16dp" />
+</shape>

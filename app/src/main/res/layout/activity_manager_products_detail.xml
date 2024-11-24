@@ -1,0 +1,194 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary"
+        android:backgroundTint="#BFDBFE"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/btnout2"
+                android:layout_width="30dp"
+                android:layout_height="28dp"
+                android:src="@drawable/back" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="100dp"
+                android:text="Product detail"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </androidx.appcompat.widget.Toolbar>
+
+    <!-- Phần nội dung với layout_weight để đẩy nút xuống đáy -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager_images"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+          />
+
+
+        <!-- Product Information Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp">
+
+            <!-- Product Name -->
+            <TextView
+                android:id="@+id/name_productdetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Light Brown Jacket"
+                android:textSize="20sp"
+                android:layout_marginLeft="15dp"
+                android:textStyle="bold" />
+
+            <!-- Product Price -->
+            <TextView
+                android:id="@+id/price_productdetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$89.97"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:layout_marginLeft="15dp"
+                android:textColor="@android:color/holo_red_dark"
+                android:paddingTop="4dp" />
+
+            <!-- Quantity -->
+            <TextView
+                android:id="@+id/quantity_productdetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quantity: 1000"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:layout_marginLeft="15dp"
+                android:paddingTop="4dp" />
+
+            <!-- Status -->
+            <TextView
+                android:id="@+id/status_productdetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Status: Còn hàng"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="10dp"
+                android:textSize="18sp"
+                android:textColor="@android:color/holo_green_dark"
+                android:paddingTop="4dp" />
+
+            <!-- Supplier -->
+            <TextView
+                android:id="@+id/supplier_productdetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Supplier: LV"
+                android:paddingTop="4dp"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"/>
+
+            <!-- Product Type -->
+            <TextView
+                android:id="@+id/type_productdetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Type: Shirt"
+                android:paddingTop="4dp"
+                android:textSize="18sp"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/size_quantities_productdetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Product Type: Shirt"
+                android:paddingTop="4dp"
+                android:textSize="18sp"
+
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"/>
+            <!-- Product Description -->
+            <TextView
+                android:id="@+id/description_productdetail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua"
+                android:paddingTop="4dp"
+                android:maxLines="2"
+                android:textSize="18sp"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="15dp"
+                android:ellipsize="end" />
+
+            <!-- Read More Link -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Read more"
+
+                android:layout_marginLeft="15dp"
+                android:textColor="@android:color/holo_blue_light"
+                android:paddingTop="4dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Update and Sold Out Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:padding="16dp"
+        android:layout_gravity="bottom">
+
+        <!-- Update Button -->
+        <Button
+            android:id="@+id/update_product"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="100dp"
+            android:backgroundTint="@android:color/holo_blue_light"
+            android:text="Update"
+            android:textColor="@android:color/white" />
+
+        <!-- Sold Out Button -->
+        <Button
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@android:color/holo_red_dark"
+            android:text="Hết Hàng"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+</LinearLayout>
