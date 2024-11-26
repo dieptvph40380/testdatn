@@ -61,6 +61,7 @@ public class CheckOutActivity extends AppCompatActivity {
     private String selectedPaymentMethod;
     private String userId;
     CartData cartData;
+    String totalString;
     List<ProducItem> products;
 
     @Override
@@ -83,6 +84,13 @@ public class CheckOutActivity extends AppCompatActivity {
         btnBack = findViewById(R.id.btnBack);
         tvMethods = findViewById(R.id.tv_Methods);
 
+        StrictMode.ThreadPolicy policy = new
+                StrictMode.ThreadPolicy.Builder().permitAll().build();
+        StrictMode.setThreadPolicy(policy);
+
+        // ZaloPay SDK Init
+        ZaloPaySDK.init(2553, Environment.SANDBOX);
+
         getUserData();
 
         recyclerView = findViewById(R.id.rcv_ClCheckOut);
@@ -98,11 +106,6 @@ public class CheckOutActivity extends AppCompatActivity {
             httpRequest.callApi().getOrder(userId).enqueue(getCartIDAc);
         }
 
-        StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
-        StrictMode.setThreadPolicy(policy);
-
-        // ZaloPay SDK Init
-        ZaloPaySDK.init(2553, Environment.SANDBOX);
 
         tvMethods.setOnClickListener(view -> {
             Intent intent = new Intent(CheckOutActivity.this, PayMothodsFragment.class);
@@ -120,60 +123,12 @@ public class CheckOutActivity extends AppCompatActivity {
         });
 
         tvOrder.setOnClickListener(view -> {
-//            if (cbChekOut.isChecked()) {
-//                // Kiểm tra điều kiện để đảm bảo các dữ liệu cần thiết đã có
-//                if (currentUserModel == null || selectedPaymentMethod == null || cartData == null || cartData.getProducts().isEmpty()) {
-//                    Toast.makeText(safeContext, "Missing required data to place order.", Toast.LENGTH_SHORT).show();
-//                    return;
-//                }
-//
-//                // Tạo đối tượng OrderRequest với id_client, payment_method và danh sách sản phẩm đã chọn
-//                OrderRequest orderRequest = new OrderRequest(userId, selectedPaymentMethod, products);
-//                Gson gson = new Gson();
-//                String orderRequestJson = gson.toJson(orderRequest);
-//                Log.d("OrderRequest", "Data sent to API: " + orderRequestJson);
-//                // Gửi API addOrder
-//                httpRequest.callApi().addOrder(orderRequest).enqueue(new Callback<ResponseBody>() {
-//                    @Override
-//                    public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
-//                        if (response.isSuccessful()) {
-//                            Toast.makeText(safeContext, "Order placed successfully!", Toast.LENGTH_SHORT).show();
-//                            Intent intent = new Intent(CheckOutActivity.this, MyOrderActivity.class);
-//                            startActivity(intent);
-//                        } else {
-//                            // Log chi tiết lỗi từ server
-//                            try {
-//                                if (response.errorBody() != null) {
-//                                    String errorResponse = response.errorBody().string();
-//                                    Log.e("OrderError", "Server error: " + errorResponse);
-//                                    Toast.makeText(safeContext, "Failed to place order: " + errorResponse, Toast.LENGTH_SHORT).show();
-//                                } else {
-//                                    Log.e("OrderError", "Unknown server error.");
-//                                    Toast.makeText(safeContext, "Failed to place order: Unknown error.", Toast.LENGTH_SHORT).show();
-//                                }
-//                            } catch (Exception e) {
-//                                Log.e("OrderError", "Error parsing errorBody: " + e.getMessage());
-//                            }
-//                        }
-//                    }
-//
-//                    @Override
-//                    public void onFailure(Call<ResponseBody> call, Throwable t) {
-//                        // Xử lý lỗi kết nối hoặc hệ thống
-//                        Toast.makeText(safeContext, "Network error: " + t.getMessage(), Toast.LENGTH_SHORT).show();
-//                        Log.e("OrderError", "Network error: " + t.getMessage());
-//                    }
-//                });
-//
-//            } else {
-//                // Hiển thị thông báo nếu checkbox chưa được chọn
-////                Toast.makeText(safeContext, "Please select the payment method before proceeding.", Toast.LENGTH_SHORT).show();
-//            }
-
             CreateOrder orderApi = new CreateOrder();
+            Log.d("CreateOrder", "Response data: " + totalString);
             try {
-                JSONObject data = orderApi.createOrder(String.valueOf(totalcheckout));
+                JSONObject data = orderApi.createOrder(totalString);
                 String code = data.getString("return_code");
+                Log.d("CreateOrder", "Response data: " + data.toString());
 
                 if (code.equals("1")) {
                     String token = data.getString("zp_trans_token");
@@ -182,18 +137,27 @@ public class CheckOutActivity extends AppCompatActivity {
                         public void onPaymentSucceeded(String s, String s1, String s2) {
                             Intent intent1=new Intent(CheckOutActivity.this, PaymentNotication.class);
                             intent1.putExtra("result","Thanh toán thành công");
+
+                            startActivity(intent1);
                         }
 
                         @Override
                         public void onPaymentCanceled(String s, String s1) {
                             Intent intent1=new Intent(CheckOutActivity.this, PaymentNotication.class);
                             intent1.putExtra("result","Hủy thanh toán");
+                            Log.d("ZaloPay", "Payment Canceled");
+                            startActivity(intent1);
                         }
 
                         @Override
                         public void onPaymentError(ZaloPayError zaloPayError, String s, String s1) {
                             Intent intent1=new Intent(CheckOutActivity.this, PaymentNotication.class);
                             intent1.putExtra("result","Lỗi thanh toán");
+                            Log.e("ZaloPay", "Payment Error: " + zaloPayError);
+//                          q // Nếu có
+                            Log.e("ZaloPay", "Additional Info: " + s + ", " + s1);
+
+                            startActivity(intent1);
                         }
                     });
                 }
@@ -217,6 +181,7 @@ public class CheckOutActivity extends AppCompatActivity {
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
+        Log.d("ZaloPay", "onNewIntent triggered");
         ZaloPaySDK.getInstance().onResult(intent);
     }
 
@@ -262,6 +227,7 @@ public class CheckOutActivity extends AppCompatActivity {
                 PricePayment= totalPrice-(PriceVoucher+PriceShip);
                 tvPC_Payment.setText(""+PricePayment);
                 totalcheckout.setText(""+PricePayment);
+                totalString = String.format("%.0f", PricePayment);
                 // Hiển thị danh sách sản phẩm trong giỏ hàng
                 adapter.setProducts(products);
             } else {

@@ -23,13 +23,7 @@
             android:name="fpl.md37.genz_fashion.UserScreen.PaymentNotication"
             android:exported="false" />
         <activity
-            android:name="fpl.md37.genz_fashion.UserScreen.PaymentNotification"
-            android:exported="false" />
-        <activity
             android:name="fpl.md37.genz_fashion.UserScreen.CheckOutActivity"
-            android:exported="false" />
-        <activity
-            android:name="fpl.md37.genz_fashion.UserScreen.PayMothodsFragment"
             android:exported="true"
             android:label="Merchant Demo"
             android:launchMode="singleTask">
@@ -44,6 +38,13 @@
                     android:scheme="demozpdk" />
             </intent-filter>
         </activity>
+
+        <activity
+            android:name="fpl.md37.genz_fashion.UserScreen.PayMothodsFragment"
+            android:exported="true">
+
+        </activity>
+
         <activity
             android:name="fpl.md37.genz_fashion.UserScreen.SearchUserActivity"
             android:exported="false" />
