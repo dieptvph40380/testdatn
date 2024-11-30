@@ -52,7 +52,7 @@ public class PayMothodsFragment extends AppCompatActivity {
         tvZalo.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                PayMothods(view, "ZaloPay");
+                PayMothods(view, "HaloPay");
             }
         });
         tvMomo.setOnClickListener(new View.OnClickListener() {

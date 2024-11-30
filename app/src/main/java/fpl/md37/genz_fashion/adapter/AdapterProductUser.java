@@ -55,7 +55,7 @@ public class AdapterProductUser extends RecyclerView.Adapter<AdapterProductUser.
         if (imageUrl != null && !imageUrl.isEmpty()) {
             if (imageUrl.startsWith("http://localhost")) {
 
-                imageUrl = imageUrl.replace("http://localhost", "http://10.0.2.2");
+                imageUrl = imageUrl.replace("http://localhost", "http://192.168.102.23 ");
             }
             Log.d("ImageURL", "Image URL: " + imageUrl);
             Glide.with(holder.image.getContext())

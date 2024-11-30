@@ -34,7 +34,7 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 
 public interface ApiService {
-    public static String BASE_URL="http://10.0.2.2:3000/api/";
+    public static String BASE_URL="http://192.168.102.23:3000/api/";
     ApiService apiService  = new Retrofit.Builder()
             .baseUrl(ApiService.BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
